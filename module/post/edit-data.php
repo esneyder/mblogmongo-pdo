@@ -73,7 +73,7 @@ if(isset($msg))
             </div>              
             
             <div class="pure-control-group">
-                <label for="state">Tipo</label>
+                <label for="state">Categoría</label>
                 <select name="categoria" class="pure-input-1-2">
                      <?php 
                       $query = "SELECT * FROM categoria"; 
