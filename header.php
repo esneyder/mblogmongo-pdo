@@ -28,7 +28,7 @@
     <div class="pure-menu pure-menu-horizontal">
     <ul class="pure-menu-list">
         <li class="pure-menu-item pure-menu-selected"><a href="index.php" class="pure-menu-link">Inicio</a></li>
-        <li class="pure-menu-item"><a href="http://mblogmongo.herokuapp.com/" class="pure-menu-link">MblogMongo</a></li>
+        <li class="pure-menu-item"><a target="_blank" href="http://mblogmongo.herokuapp.com/" class="pure-menu-link">MblogMongo</a></li>
         <li class="pure-menu-item"><a href="../../ " class="pure-menu-link">Principal</a></li>
         <li class="pure-menu-item pure-menu-disabled">Administración</li>
     </ul>
