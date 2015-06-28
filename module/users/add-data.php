@@ -18,15 +18,17 @@ $data = fread($fp, filesize($archivo_temporal));
 ob_end_clean();
 ob_start();
 //mostramos la imagen en nuestro explorador para comprobar que se ha cargado correctamente
- echo $data;
+ //echo $data;
 
 
 /* en nuestro caso subiremos imágenes jpeg, pero si queremos incluir tipos diferentes deberíamos usar la variable $tipo definida anteriormente y sustituirla por image/jpeg que aparece en la línea de abajo */
+/*
 header('Content-Type: image/jpeg');
 header("Content-Disposition: inline; filename='imagen.jpg'");
 header('Expires: 0');
 header('Pragma: cache');
 header('Cache-Control: private');
+*/
 ob_end_flush ();
 //escapar los caracteres
 $data = mysql_escape_string($data);
@@ -41,7 +43,7 @@ fclose($fp);
 	 
 	
 	if($crud->create($nombre,$perfil,$email,$password,
-    $tipo,$region,$estado,$data))
+    $tipo,$region,$estado))
 	{
 		header("Location: add-data.php?inserted");
 	}
