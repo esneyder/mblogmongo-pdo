@@ -10,19 +10,19 @@ class crud
 
 /*funCION CREar poST*/
 
-public function create($titulo,$intro,$texto,$categoria ,$usuario)
+public function create($titulo,$intro,$texto,$categoria,$fecha ,$usuario)
 	{
 		try
 		{
 			$stmt = $this->db->prepare("INSERT INTO post(titulo,intro,texto,
-													categoria ,usuario)
+													categoria ,fecha,usuario)
 			 										VALUES(:titulo, :intro, :texto,
-			 										:categoria, :usuario )");
+			 										:categoria,:fecha, :usuario )");
 			$stmt->bindparam(":titulo",$titulo);
 			$stmt->bindparam(":intro",$intro);
 			$stmt->bindparam(":texto",$texto);
 			$stmt->bindparam(":categoria",$categoria);
-			//$stmt->bindparam(":fecha",$fecha);
+			$stmt->bindparam(":fecha",$fecha);
 			$stmt->bindparam(":usuario",$usuario);
 		 
 			$stmt->execute();
@@ -54,7 +54,7 @@ public function delete($id)
 	}
 
 /*actualizar post por id registro*/
-public function update($id,$titulo,$intro,$texto,$categoria ,$usuario)
+public function update($id,$titulo,$intro,$texto,$categoria ,$fecha,$usuario)
 	{
 		try
 		{
@@ -62,6 +62,7 @@ public function update($id,$titulo,$intro,$texto,$categoria ,$usuario)
 		                                               intro=:intro, 
 													   texto =:texto, 
 													   categoria=:categoria,
+													   fecha=:fecha,
 													   usuario=:usuario 													 
 													WHERE id=:id ");
 			$stmt->bindparam(":titulo",$titulo);
@@ -69,6 +70,7 @@ public function update($id,$titulo,$intro,$texto,$categoria ,$usuario)
 			$stmt->bindparam(":texto",$texto);
 			$stmt->bindparam(":categoria",$categoria);
 			$stmt->bindparam(":usuario",$usuario);			 
+			$stmt->bindparam(":fecha",$fecha);			 
 			$stmt->bindparam(":id",$id);
 			$stmt->execute();
 			

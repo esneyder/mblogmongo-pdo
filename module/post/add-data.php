@@ -8,12 +8,12 @@ if(isset($_POST['btn-save']))
 	$intro = $_POST['intro'];
 	$texto = $_POST['texto'];
   $categoria = $_POST['categoria'];
-  $fecha = date_format($date, 'd/m/y');
+ $fecha = date('y-m-d');
   $usuario = 'edesalla17@gmail.com';
    
 	 
 	
-	if($crud->create($titulo,$intro,$texto,$categoria, $usuario ))
+	if($crud->create($titulo,$intro,$texto,$categoria,$fecha, $usuario ))
 	{
 		header("Location: add-data.php?inserted");
 	}

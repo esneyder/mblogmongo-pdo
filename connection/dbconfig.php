@@ -1,9 +1,9 @@
 <?php
 
-$DB_host = "localhost";
-$DB_user = "esneyder";
-$DB_pass = "123";
-$DB_name = "blog";
+$DB_host = "sql5.freemysqlhosting.net";
+$DB_user = "sql582157";
+$DB_pass = "hX3!qP9*";
+$DB_name = "sql582157";
 
 
 try
