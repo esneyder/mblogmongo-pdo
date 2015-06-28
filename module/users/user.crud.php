@@ -14,7 +14,7 @@ class crud
 		try
 		{
 			$stmt = $this->db->prepare("INSERT INTO usuarios(nombre,perfil,email,
-													password,tipo,region,estado,archivo)
+													password,tipo,region,estado)
 			 										VALUES(:nombre, :perfil, :email,
 			 										:password,:tipo,:region,:estado )");
 			$stmt->bindparam(":nombre",$nombre);

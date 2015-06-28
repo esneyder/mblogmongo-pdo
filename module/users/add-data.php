@@ -3,36 +3,7 @@
 include_once '../../connection/dbconfig.php';
 if(isset($_POST['btn-save']))
 {
-
-  // archivo temporal (ruta y nombre).
-$tmp_name = $_FILES['archivo']['tmp_name'];
-// Obtenemos los datos de la imagen tamaño, tipo y nombre
-$tamano = $_FILES['archivo']['size'];
-$tipo = $_FILES['archivo']['type'];
-$nombre = $_FILES['archivo']['name'];
-//ruta completa
-$archivo_temporal = $_FILES['archivo']['tmp_name'];
-//leer el archivo(imagen) temporal en binario
-$fp = fopen($archivo_temporal, 'r+b');
-$data = fread($fp, filesize($archivo_temporal));
-ob_end_clean();
-ob_start();
-//mostramos la imagen en nuestro explorador para comprobar que se ha cargado correctamente
- //echo $data;
-
-
-/* en nuestro caso subiremos imágenes jpeg, pero si queremos incluir tipos diferentes deberíamos usar la variable $tipo definida anteriormente y sustituirla por image/jpeg que aparece en la línea de abajo */
-/*
-header('Content-Type: image/jpeg');
-header("Content-Disposition: inline; filename='imagen.jpg'");
-header('Expires: 0');
-header('Pragma: cache');
-header('Cache-Control: private');
-*/
-ob_end_flush ();
-//escapar los caracteres
-$data = mysql_escape_string($data);
-fclose($fp);
+ 
 	$nombre = $_POST['nombre'];
 	$perfil = $_POST['perfil'];
 	$email = $_POST['email'];
