@@ -22,12 +22,17 @@
 
 <body>
 
-<div class="navbar navbar-default navbar-static-top" role="navigation">
+ 
     <div class="container">
  
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#" title='Programming Blog'>mICodigo</a>
-            </div>
+    <div class="pure-menu pure-menu-horizontal">
+    <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-selected"><a href="index.php" class="pure-menu-link">Inicio</a></li>
+        <li class="pure-menu-item"><a href="http://mblogmongo.herokuapp.com/" class="pure-menu-link">MblogMongo</a></li>
+        <li class="pure-menu-item"><a href="../../ " class="pure-menu-link">Principal</a></li>
+        <li class="pure-menu-item pure-menu-disabled">Administración</li>
+    </ul>
+</div> 
+  </div>
+  <br />
  
-    </div>
-</div>

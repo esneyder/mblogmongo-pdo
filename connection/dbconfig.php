@@ -22,6 +22,9 @@ $crud = new crud($DB_con);
 }elseif (is_file("post.crud.php")) {
  include_once 'post.crud.php';
  $crud = new crud($DB_con);
+}elseif (is_file("get-post.php")) {
+	 include_once 'get-post.php';
+    $post = new post($DB_con);
 }
 
 ?>
