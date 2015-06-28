@@ -43,6 +43,9 @@
                     <li class="nav-item">
                         <a class="pure-button" href="module/post">Post</a>
                     </li>
+                     <li class="nav-item">
+                        <a class="pure-button" target="_blank" href="https://github.com/esneyder/mblogmongo-pdo">Descargar</a>
+                    </li>
                 </ul>
             </nav>
         </div>
